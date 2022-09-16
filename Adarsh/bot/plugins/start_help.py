@@ -40,15 +40,15 @@ async def start(b, m):
         await db.add_user(m.from_user.id)
         await b.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ:** \n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!__"
+            f"**Novo Usuário Associado:** \n\n__Meu Novo Amigo__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Começou Seu Bot !!__"
         )
     if Var.UPDATES_CHANNEL != "None":
         try:
             user = await b.get_chat_member(Var.UPDATES_CHANNEL, m.chat.id)
-            if user.status == "kicked":
+            if user.status == "BANIDO":
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="__𝓢𝓞𝓡𝓡𝓨, 𝓨𝓞𝓤 𝓐𝓡𝓔 𝓐𝓡𝓔 𝓑𝓐𝓝𝓝𝓔𝓓 𝓕𝓡𝓞𝓜 𝓤𝓢𝓘𝓝𝓖 𝓜𝓔. 𝓒ᴏɴᴛᴀᴄᴛ ᴛʜᴇ 𝓓ᴇᴠᴇʟᴏᴘᴇʀ__\n\n  **𝙃𝙚 𝙬𝙞𝙡𝙡 𝙝𝙚𝙡𝙥 𝙮𝙤𝙪**",
+                    text="__DESCULPE, VOCÊ ESTÁ PROIBIDO DE ME USAR. ENTRE EM CONTATO COM O DESENVOLVEDOR__\n\n  **ELE VAI TE AJUDAR**",
                     disable_web_page_preview=True
                 )
                 return
@@ -56,11 +56,11 @@ async def start(b, m):
              await StreamBot.send_photo(
                 chat_id=m.chat.id,
                 photo="https://telegra.ph/file/9d94fc0af81234943e1a9.jpg",
-                caption="<i>𝙹𝙾𝙸𝙽 CHANNEL 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴🔐</i>",
+                caption="<i>INSCREVA-SE NO CANAL PARA ME USAR🔐</i>",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("ENTRAR 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -70,14 +70,14 @@ async def start(b, m):
         except Exception:
             await b.send_message(
                 chat_id=m.chat.id,
-                text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b> <a href='https://github.com/adarsh-goel'>CLICK HERE FOR SUPPORT </a></b>",
+                text="<i>ALGO DEU ERRADO</i> <b> <a href='https://github.com/adarsh-goel'>CLIQUE AQUI PARA OBTER APOIO</a></b>",
                 
                 disable_web_page_preview=True)
             return
     await StreamBot.send_photo(
         chat_id=m.chat.id,
         photo ="https://telegra.ph/file/ca10e459bc6f48a4ad0f7.jpg",
-        caption =f'Hi {m.from_user.mention(style="md")}!,\nI am Telegram File to Link Generator Bot with Channel support.\nSend me any file and get a direct download link and streamable link.!',
+        caption =f'Oi {m.from_user.mention(style="md")}!,\nEu Sou um Bot do Telegram Gerador de Arquivo Para Link com suporte para canal.\nEnvie-me qualquer arquivo e obtenha um link de Download Direto e um link para streaming.!',
         reply_markup=buttonz)
 
 
@@ -87,15 +87,15 @@ async def help_handler(bot, message):
         await db.add_user(message.from_user.id)
         await bot.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ **\n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{message.from_user.first_name}](tg://user?id={message.from_user.id}) __Started Your Bot !!__"
+            f"**Novo Usuário Associado **\n\n__Meu Novo Amigo__ [{message.from_user.first_name}](tg://user?id={message.from_user.id}) __Começou Seu Bot !!__"
         )
     if Var.UPDATES_CHANNEL != "None":
         try:
             user = await bot.get_chat_member(Var.UPDATES_CHANNEL, message.chat.id)
-            if user.status == "kicked":
+            if user.status == "BANIDO":
                 await bot.send_message(
                     chat_id=message.chat.id,
-                    text="<i>Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ FROM USING ᴍᴇ. Cᴏɴᴛᴀᴄᴛ ᴛʜᴇ Dᴇᴠᴇʟᴏᴘᴇʀ</i>",
+                    text="<i>DESCULPE, SENHOR, VOCÊ ESTÁ BANIDO DE ME USAR. ENTRE EM CONTATO COM O DESENVOLVEDOR</i>",
                     
                     disable_web_page_preview=True
                 )
@@ -104,11 +104,11 @@ async def help_handler(bot, message):
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
                 photo="https://telegra.ph/file/ca10e459bc6f48a4ad0f7.jpg",
-                Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
+                Caption="**PARTICIPE DO CANAL DE UPDATES PARA USAR ESTE BOT!**\n\n__POR SOBRECARGA, SOMENTE INSCRITOS DO CANAL PODEM USAR O BOT!__",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("ENTRAR NO CANAL DE UPDATES", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -118,18 +118,18 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [ADARSH GOEL](https://github.com/adarsh-goel/-pro/issues).",
+                text="__SUPORTE. CONTATE-ME__ [ADARSH GOEL](https://github.com/adarsh-goel/-pro/issues).",
                 disable_web_page_preview=True)
             return
     await message.reply_text(
-        text="""<b> Send me any file or video i will give you streamable link and download link.</b>\n
-<b> I also support Channels, add me to you Channel and send any media files and see miracle✨ also send /list to know all commands""",
+        text="""<b> Envie-me qualquer arquivo ou vídeo que eu lhe darei o link para stream e o link para download.</b>\n
+<b> Eu também apoio Canais, me adicione no seu Canal e mande qualquer arquivo de mídia e veja o milagre✨ envie também /list para conhecer todos os comandos""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ DEV", url="https://github.com/adarsh-goel")],
-                [InlineKeyboardButton("💥 Source Code", url="https://github.com/adarsh-goel/-pro/")]
+                [InlineKeyboardButton("💁‍♂️ Desenvolvedor", url="https://github.com/adarsh-goel")],
+                [InlineKeyboardButton("💥 Código Fonte", url="https://github.com/adarsh-goel/-pro/")]
             ]
         )
     )
