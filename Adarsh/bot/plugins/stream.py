@@ -20,7 +20,7 @@ pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 
 
-@StreamBot.on_message((filters.regex("login🔑") | filters.command("login")) , group=4)
+@StreamBot.on_message((filters.regex("login") | filters.command("login")) , group=4)
 async def login_handler(c: Client, m: Message):
     try:
         try:
@@ -105,25 +105,30 @@ async def private_receive_handler(c: Client, m: Message):
         
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
+<i><u>Seu Link Foi Gerado !</u></i>
 
-<b>📂 NOME DO ARQUIVO :</b> <i>{}</i>
+<b>📂 NOME DO ARQUIVO: </b> 
+<i>{}</i>
 
-<b>📦 TAMANHO DO ARQUIVO :</b> <i>{}</i>
+<b>📦 TAMANHO DO ARQUIVO: </b> 
+<i>{}</i>
 
-<b>📥 DOWNLOAD :</b> <i>{}</i>
+<b>📥 DOWNLOAD: </b> 
+<i>{}</i>
 
-<b> 🖥ASSISTIR  :</b> <i>{}</i>
+<b>🖥 ASSISTIR: </b>
+<i>{}</i>
 
-<b>🚸 NOTA : O LINK NÃO VAI EXPIRAR ATÉ QUE EU DELETE</b>"""
+<b>🚸 NOTA 🚸</b>
+<b>O LINK NÃO VAI EXPIRAR ATÉ QUE EU O DELETE</b>"""
 
         await log_msg.reply_text(text=f"**REQUERIDO POR :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**ID DO USUÁRIO :** `{m.from_user.id}`\n**Link de Streaming :** {stream_link}", disable_web_page_preview=True,  quote=True)
         await m.reply_text(
             text=msg_text.format(get_name(log_msg), humanbytes(get_media_file_size(m)), online_link, stream_link),
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥 ASSISTIR 🖥", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('📥 BAIXAR 📥', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥  ASSISTIR  🖥", url=stream_link), #Stream Link
+                                                InlineKeyboardButton('📥  BAIXAR  📥', url=online_link)]]) #Download Link
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
@@ -136,7 +141,7 @@ async def channel_receive_handler(bot, broadcast):
     if MY_PASS:
         check_pass = await pass_db.get_user_pass(broadcast.chat.id)
         if check_pass == None:
-            await broadcast.reply_text("LFaça login primeiro usando o comando /login \nNão sabe a senha? solicite ao desenvolvedor!")
+            await broadcast.reply_text("Faça login primeiro usando o comando /login \nNão sabe a senha? solicite ao desenvolvedor!")
             return
         if check_pass != MY_PASS:
             await broadcast.reply_text("Senha errada, tente novamente \n\nEnvie /login Novamente")
@@ -158,8 +163,8 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("🖥 ASSISTIR 🖥", url=stream_link),
-                     InlineKeyboardButton('📥 BAIXAR 📥', url=online_link)] 
+                    [InlineKeyboardButton("🖥  ASSISTIR  🖥", url=stream_link),
+                     InlineKeyboardButton('📥  BAIXAR  📥', url=online_link)] 
                 ]
             )
         )
