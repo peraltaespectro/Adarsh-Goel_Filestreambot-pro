@@ -25,8 +25,8 @@ if MY_PASS:
 else:
             buttonz=ReplyKeyboardMarkup(
             [
-                ["start","help","login"],
-                ["follow","ping","status","maintainers"]
+                ["/start","/help","/login"],
+                ["/follow","/ping","/status","/maintainers"]
                         
             ],
             resize_keyboard=True
