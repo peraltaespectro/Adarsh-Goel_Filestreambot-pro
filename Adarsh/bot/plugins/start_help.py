@@ -16,8 +16,8 @@ from pyrogram.types import ReplyKeyboardMarkup
 if MY_PASS:
             buttonz=ReplyKeyboardMarkup(
             [
-                ["start⚡️","help📚","login🔑","DC"],
-                ["follow❤️","ping📡","status📊","maintainers😎"]
+                ["Start","Help","Login"],
+                ["Follow","Ping","Status","Maintainers"]
                         
             ],
             resize_keyboard=True
@@ -25,8 +25,8 @@ if MY_PASS:
 else:
             buttonz=ReplyKeyboardMarkup(
             [
-                ["start⚡️","help📚","DC"],
-                ["follow❤️","ping📡","status📊","maintainers😎"]
+                ["start","help","login"],
+                ["follow","ping","status","maintainers"]
                         
             ],
             resize_keyboard=True
@@ -34,7 +34,7 @@ else:
 
             
             
-@StreamBot.on_message((filters.command("start") | filters.regex('start⚡️')) & filters.private )
+@StreamBot.on_message((filters.command("start") | filters.regex('start')) & filters.private )
 async def start(b, m):
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id)
@@ -81,7 +81,7 @@ async def start(b, m):
         reply_markup=buttonz)
 
 
-@StreamBot.on_message((filters.command("help") | filters.regex('help📚')) & filters.private )
+@StreamBot.on_message((filters.command("help") | filters.regex('help')) & filters.private )
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
@@ -122,8 +122,8 @@ async def help_handler(bot, message):
                 disable_web_page_preview=True)
             return
     await message.reply_text(
-        text="""<b> Envie-me qualquer arquivo ou vídeo que eu lhe darei o link para stream e o link para download.</b>\n
-<b> Eu também apoio Canais, me adicione no seu Canal e mande qualquer arquivo de mídia e veja o milagre✨ envie também /list para conhecer todos os comandos""",
+        text="""<b>Envie-me qualquer arquivo ou vídeo que eu lhe darei o link para stream e o link para download.</b>\n
+<b>Eu também apoio Canais, me adicione no seu Canal e mande qualquer arquivo de mídia e veja o milagre✨. \nMe envie também /list para conhecer todos os comandos""",
         
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
