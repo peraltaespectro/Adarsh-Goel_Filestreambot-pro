@@ -115,60 +115,60 @@ DATABASE_URL=mongodb_uri
   </details>
 
 <details>
-  <summary><b>Vars and Details :</b></summary>
+  <summary><b>Variaveis e detalhes :</b></summary>
 
-`API_ID` : Goto [my.telegram.org](https://my.telegram.org) to obtain this.
+`API_ID` : Vamos para [my.telegram.org](https://my.telegram.org) para obter isso.
 
-`API_HASH` : Goto [my.telegram.org](https://my.telegram.org) to obtain this.
+`API_HASH` : Vamos para [my.telegram.org](https://my.telegram.org) para obter isso.
   
-`MY_PASS` : Bot PASSWORD
+`MY_PASS` : SENHA do bot
 
-`BOT_TOKEN` : Get the bot token from [@BotFather](https://telegram.dog/BotFather)
+`BOT_TOKEN` : Obtenha o token do bot em [@BotFather](https://telegram.dog/BotFather)
 
-`BIN_CHANNEL` : Create a new channel (private/public), add [@missrose_bot](https://telegram.dog/MissRose_bot) as admin to the channel and type /id. Now copy paste the ID into this field.
+`BIN_CHANNEL` : Crie um novo canal (privado/público), adicione [@missrose_bot](https://telegram.dog/MissRose_bot) como administrador do canal e digite /id. Agora copie e cole o ID neste campo.
   
-`OWNER_USERNAME` : U should be knowing it afterall it's your username dont remember it? just go to settings!
+`OWNER_USERNAME` : Vc deveria saber afinal é seu nome de usuário não lembra?  é só ir nas configurações!
 
-`OWNER_ID` : Your Telegram User ID
+`OWNER_ID` : Seu ID de usuário do Telegram
 
-`DATABASE_URL` : MongoDB URI for saving User IDs when they first Start the Bot. We will use that for Broadcasting to them. I will try to add more features related with Database. If you need help to get the URI you can click on logo below!
+`DATABASE_URL` : URI do MongoDB para salvar IDs de usuário quando eles iniciam o bot pela primeira vez.  Usaremos isso para transmitir para eles. Vou tentar adicionar mais recursos relacionados ao banco de dados.  Se você precisar de ajuda para obter o URI, clique no logotipo abaixo!
 
 [![mongo](https://telegra.ph/file/fd68906852c71fdd68bef.jpg)](https://www.youtube.com/watch?v=HhHzCfrqsoE)
 
- Option Vars
+ Variaveis Opcionais
 
-`UPDATES_CHANNEL` : Put a Public Channel Username, so every user have to Join that channel to use the bot. Must add bot to channel as Admin to work properly.
+`UPDATES_CHANNEL` : Coloque um nome de usuário de canal público, para que todos os usuários tenham que ingressar nesse canal para usar o bot.  Deve adicionar bot ao canal como Admin para funcionar corretamente.
 
-`BANNED_CHANNELS` : Put IDs of Banned Channels where bot will not work. You can add multiple IDs & separate with <kbd>Space</kbd>.
+`BANNED_CHANNELS` : Coloque IDs de Canais Banidos onde o bot não funcionará.  Você pode adicionar vários IDs e separar com <kbd>Space</kbd>.
 
-`SLEEP_THRESHOLD` : Set a sleep threshold for flood wait exceptions happening globally in this telegram bot instance, below which any request that raises a flood wait will be automatically invoked again after sleeping for the required amount of time. Flood wait exceptions requiring higher waiting times will be raised. Defaults to 60 seconds.
+`SLEEP_THRESHOLD` : Defina um limite de suspensão para exceções de espera de inundação que ocorrem globalmente nesta instância de bot de telegrama, abaixo do qual qualquer solicitação que gere uma espera de inundação será invocada automaticamente novamente após inatividade pelo período de tempo necessário.  Exceções de espera de inundação que exigem tempos de espera mais altos serão geradas.  O padrão é 60 segundos.
 
-`WORKERS` : Number of maximum concurrent workers for handling incoming updates. Defaults to `3`
+`WORKERS` : Número máximo de trabalhadores simultâneos para lidar com atualizações recebidas.  Padrões para `3`
 
-`PORT` : The port that you want your webapp to be listened to. Defaults to `8080`
+`PORT` : A porta que você deseja que seu webapp seja ouvido.  Padrões para `8080`
 
-`WEB_SERVER_BIND_ADDRESS` : Your server bind adress. Defauls to `0.0.0.0`
+`WEB_SERVER_BIND_ADDRESS` : Seu endereço de ligação do servidor.  Padrão para `0.0.0.0`
 
-`NO_PORT` : If you don't want your port to be displayed. You should point your `PORT` to `80` (http) or `443` (https) for the links to work. Ignore this if you're on Heroku.
+`NO_PORT` : Se você não quiser que sua porta seja exibida.  Você deve apontar seu `PORT` to `80` (http) or `443` (https) para que os links funcionem.  Ignore isso se você estiver no Heroku.
 
-`FQDN` :  A Fully Qualified Domain Name if present. Defaults to `WEB_SERVER_BIND_ADDRESS` </details>
+`FQDN` :  Um nome de domínio totalmente qualificado, se presente.  Padrões para `WEB_SERVER_BIND_ADDRESS` </details>
 
 <details>
-  <summary><b>How to Use :</b></summary>
+  <summary><b>Como usar :</b></summary>
 
-:warning: **Before using the  bot, don't forget to add the bot to the `BIN_CHANNEL` as an Admin**
+:warning: **Antes de usar o bot, não se esqueça de adicionar o bot ao `BIN_CHANNEL` como administrador**
  
-`/start` : To check if the bot is alive or not.
+`/start` : Para verificar se o bot está vivo ou não.
 
-To get an instant stream link, just forward any media to the bot and boom, its fast af.
+Para obter um link de fluxo instantâneo, basta encaminhar qualquer mídia para o bot e boom, é rápido.
   
 ![image](https://user-images.githubusercontent.com/88939380/145798095-3cdad108-96b0-4391-a540-cad144d6b864.png)
 
 
-### Channel Support
-Bot also Supported with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with **Get Download Link** Button. </details>
+### Canal de Suporte
+Bot também suportado com canais.  Basta adicionar o canal do bot como administrador.  Se algum novo arquivo entrar no Canal, ele será editado com **Get Download Link** Botão. </details>
 
-### Credits : 
+### Créditos : 
 
-- [Me](https://github.com/adarsh-goel)
-- Everyone In This Journey !
+- [Eu](https://github.com/adarsh-goel)
+- Todos nesta jornada !
