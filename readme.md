@@ -117,7 +117,8 @@ DATABASE_URL=mongodb_uri
 <details>
   <summary><b>Variaveis e detalhes :</b></summary>
   
- Variaveis Obrigatótias
+  
+ Variaveis Obrigatórias
 
 `API_ID` : Vamos para [my.telegram.org](https://my.telegram.org) para obter isso.
 
