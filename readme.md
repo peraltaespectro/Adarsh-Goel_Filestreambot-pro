@@ -9,11 +9,11 @@
   </a>
   
  <p align="center">
-    A Telegram bot to turn all media and documents files to instant direct download and stream link .
+    Um bot do Telegram para transformar todos os arquivos de mídia e documentos em download direto instantâneo e link de fluxo.
     <br />
    </strong></a>
     <br />
-    <a href="https://github.com/adarsh-goel/pro/issues">Report a Bug</a>
+    <a href="https://github.com/adarsh-goel/pro/issues">Reportar um erro</a>
     |
     <a href="https://github.com/adarsh-goel/filestreambot-pro/issues">Request Feature</a>
   </p>
@@ -21,35 +21,35 @@
 
 <hr>
 
-## Please Follow me so you know whenever I release a new Project!❤️‍🔥
-### Incase you are having trouble deploying bot you may hire developer we have reasonable rates [click here](https://t.me/+KvjFjOWicuZmOTQx)
+## Por favor, me siga para saber sempre que eu lançar um novo projeto❤️‍🔥
+### Caso você esteja tendo problemas para implantar o bot, você pode contratar um desenvolvedor, temos taxas razoáveis [Clique aqui](https://t.me/+KvjFjOWicuZmOTQx)
 
-## 🍁 About This Bot :
+## 🍁 Sobre este bot :
 
 ![streamingfilestreambot-professional-live_1](https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png)
 
 </p>
 <p align='center'>
-    This bot will give you stream links for Telegram files without the need of waiting till the download completes
+    Este bot fornecerá links de streaming para arquivos do Telegram sem a necessidade de esperar até que o download seja concluído
 </p>
 
 
-## ♢ How to make your own :
+## ♢ Como fazer o seu :
 
 
-#### ♢ Click on This Drop-down and get more details
+#### ♢ Clique neste menu suspenso e obtenha mais detalhes
 <br>
 <details>
   <summary><b>Deploy on Heroku:</b></summary>
 
 
-1. Fork This Repo
-2. Click on the button to Deploy and follow steps
+1. Clone este repositório
+2. Clique no botão para implantar e siga os passos
 
-<h4> So Follow Above Steps 👆 and then deploy other wise bot won't work</h4>
+<h4> Então siga os passos acima 👆 e, em seguida, implantar outro bot sábio não funcionará</h4>
 
-Press the below button to Fast deploy on Heroku/Raiwlay
-Either you could locally host or deploy on [Heroku](https://heroku.com)
+Pressione o botão abaixo para implantar rapidamente no Heroku/Raiwlay
+Você pode hospedar localmente ou implantar em [Heroku](https://heroku.com)
 ### 💜 Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/)
@@ -57,7 +57,7 @@ Either you could locally host or deploy on [Heroku](https://heroku.com)
 <br>
 
 
-then goto the <a href="#mandatory-vars">variables tab</a> for more info on setting up environmental variables. </details>
+então vá para o <a href="#mandatory-vars">guia de variáveis</a> para mais informações sobre como configurar variáveis ambientais. </details>
 
 <details>
   <summary><b>Features:</b></summary>
