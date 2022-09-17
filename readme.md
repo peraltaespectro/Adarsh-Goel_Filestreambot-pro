@@ -116,7 +116,7 @@ DATABASE_URL=mongodb_uri
 
 <details>
   <summary><b>Variaveis e detalhes :</b></summary>
-  \n
+  <br>
   
  Variaveis Obrigatórias
 
