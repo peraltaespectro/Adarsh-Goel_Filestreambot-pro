@@ -40,7 +40,7 @@
 #### ♢ Clique neste menu suspenso e obtenha mais detalhes
 <br>
 <details>
-  <summary><b>Deploy on Heroku:</b></summary>
+  <summary><b>Deploy no Heroku:</b></summary>
 
 
 1. Clone este repositório
@@ -60,28 +60,28 @@ Você pode hospedar localmente ou implantar em [Heroku](https://heroku.com)
 então vá para o <a href="#mandatory-vars">guia de variáveis</a> para mais informações sobre como configurar variáveis ambientais. </details>
 
 <details>
-  <summary><b>Features:</b></summary>
+  <summary><b>Características:</b></summary>
   
 <p>
 
-🚀Features<p>
-💥Superfast⚡️ download and stream links.<br>
-💥No ads in generated links.<br>
-💥Superfast interface.<br>
-💥Along with the links you also get file information like name,size ,etc.<br>
-💥Updates channel Support.<br>
-💥Mongodb database support for broadcasting.<br>
-💥Password Protection.<br>
-💥User Freindly Interface.<br>
-💥Ping check.<br>
-💥User DC Check.<br>
-💥Real time CPU , RAM , Internet usage. <br>
-💥Custom Domain support. <br>
-💥All unwanted code removed. <br>
-💥A lot more tired of writing check out by deploying it. 
+🚀Características<p>
+💥Super rápido⚡️ baixar e transmitir links.<br>
+💥Nenhum anúncio nos links gerados.<br>
+💥Interface super-rápida.<br>
+💥Junto com os links, você também obtém informações do arquivo como nome, tamanho, etc..<br>
+💥Suporte a um canal de atualizações.<br>
+💥Suporte de banco de dados Mongodb para transmissão.<br>
+💥Proteção com senha.<br>
+💥Interface amigável.<br>
+💥Verificação de ping.<br>
+💥Verificação de DC do usuário.<br>
+💥CPU em tempo real, RAM, uso da Internet. <br>
+💥Suporte de domínio personalizado. <br>
+💥Todo o código indesejado removido. <br>
+💥Muito mais cansado de escrever check-out implantando-o. 
 </details>
 <details>
-  <summary><b>Host it on VPS Locally :</b></summary>
+  <summary><b>Hospede-o no VPS localmente :</b></summary>
 
 
 ```py
@@ -93,14 +93,14 @@ pip install -r requirements.txt
 python3 -m Adarsh
 ```
 
-and to stop the whole bot,
+e para parar todo o bot,
  do <kbd>CTRL</kbd>+<kbd>C</kbd>
 
-Setting up things
+Configurando coisas
 
-If you're on Heroku, just add these in the Environmental Variables
-or if you're Locally hosting, create a file named `config.env` in the root directory and add all the variables there.
-An example of `config.env` file:
+Se você estiver no Heroku, basta adicioná-los nas Variáveis Ambientais
+ou se você estiver hospedando localmente, crie um arquivo chamado `config.env` no diretório raiz (root) e adicione todas as variáveis lá.
+Um exemplo de `config.env` Arquivo:
 
 ```py
 API_ID=12345
